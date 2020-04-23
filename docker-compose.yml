@@ -1,0 +1,11 @@
+version: '3'
+    
+services:
+    frontend:
+        build: .
+        tty: true
+        command: sh -c 'yarn start'
+        volumes:
+        - .:/code
+        ports:
+        - "3000:3000"
